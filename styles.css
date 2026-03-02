@@ -10,11 +10,6 @@ h1 {
     margin: 20px 0;
 }
 
-#loading {
-    display: none;
-    text-align: center;
-}
-
 .loading-spinner {
     border: 8px solid #f3f3f3;
     border-top: 8px solid #3498db;
@@ -36,23 +31,35 @@ h1 {
     margin: 20px;
     padding: 20px;
     text-align: center;
+    object-fit: cover;
 }
 
 .border-grid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    object-fit: cover;
 }
 
 .border-country {
     background: #e7e7e7;
     border-radius: 5px;
     margin: 5px;
-    padding: 10px;
+    padding: 30px;
     cursor: pointer;
+}
+.country-card img,
+.border-grid img {
+    width: 120px;       /* desired fixed width */
+    max-width: 100%;    /* don't overflow container */
+    height: 80px;       /* desired fixed height */
+    object-fit: cover;  /* preserve aspect ratio, crop if needed */
+    display: block;
+    margin: 0 auto;
 }
 
 .error-message {
+    background-color: red;
     color: red;
     text-align: center;
     margin: 20px 0;
